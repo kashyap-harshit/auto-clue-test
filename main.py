@@ -17,3 +17,7 @@
 
 # from reports.report_generator import generate_report
 # generate_report()   
+
+
+from ai.insight_engine import provide_insights
+print(provide_insights())

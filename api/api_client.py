@@ -52,3 +52,7 @@ def get_leaderboard():
 def get_users_list():
     print("hitting /admin/users-list?page=1")
     return call_endpoint("/admin/users-list?page=1", method="get", json={})
+
+def get_something(): #for 404
+    print("hitting a random that doesn't exist")
+    return call_endpoint("/doesnotexist", method="get", json={})
