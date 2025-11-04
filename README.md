@@ -21,7 +21,7 @@ Auto-Clue Testing is an automation tool that integrates with your existing backe
 ## Installation
 
 ```bash
-git clone https://github.com/<your-username>/auto-clue-testing.git
+git clone https://github.com/kashyap-harshit/auto-clue-testing.git
 cd auto-clue-testing
 python -m venv venv
 venv\Scripts\activate  # or source venv/bin/activate
