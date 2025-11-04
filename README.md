@@ -1,16 +1,17 @@
 # Auto-Clue Testing
 
-Auto-Clue Testing is an AI-assisted automation framework that uses Selenium, Flask, and Google Gemini to run web tests, log results, and generate intelligent insights and reports automatically.
+Auto-Clue Testing is an automation tool that integrates with your existing backend to test APIs, log data in MongoDB, and generate AI-powered insights using Google Gemini. It simplifies backend testing and reporting for monitoring systems.
 
 ---
 
 ## Features
 
-* AI insights from test logs using Google Gemini
-* Automated web testing with Selenium
-* Excel-based reporting
-* Database logging and traceability
-* Configurable scheduling for automated runs
+* Automated API calls for performance and leaderboard data
+* AI-based insights using Google Gemini
+* Generate reports (eg., sheets)
+* MongoDB logging for all API results
+* Scheduled execution using `schedule`
+* Lightweight and configurable with `.env`
 
 ---
 
@@ -27,45 +28,44 @@ venv\Scripts\activate  # or source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Create a `.env` file based on `.env.example` and add your Gemini API key and database URI.
+Create a `.env` file based on `.env.example` and set the following:
+
+```
+GEMINI_API_KEY=<your_gemini_api_key>
+MONGO_URI=<your_mongo_connection_string>
+BASE_URL=<your_backend_base_url>
+```
 
 ---
 
 ## Usage
 
-Run the full workflow:
+Run the main automation workflow:
 
 ```bash
 python main.py
 ```
 
-Run AI insights only:
+This will:
 
-```bash
-python -m ai.insight_engine
-```
-
-Run tests:
-
-```bash
-pytest
-```
+1. Fetch recent API data.
+2. Log results to MongoDB.
+3. Generate AI insights using Gemini.
+4. Schedule future runs automatically.
+5. Generate reports (eg., sheets)
 
 ---
 
 ## Requirements
 
-* selenium
-* google-generativeai
-* flask
-* pytest
-* pandas
-* openpyxl
-* python-dotenv
-* schedule
+```
+google-generativeai
+requests
+python-dotenv
+pymongo
+pandas
+schedule
+```
 
 ---
 
-## License
-
-Apache 2.0 License
