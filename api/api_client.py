@@ -15,3 +15,7 @@ def safe_preview(resp):
         return {"json_len": len(str(j))} 
     except:
         return {"text_len": len(resp.text)}
+    
+
+def get_leaderboard():
+    return call_endpoint("/admin/get-leaderboard")
