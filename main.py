@@ -8,6 +8,12 @@
 
 
 
-from scheduler.scheduler import start_scheduler
-if __name__ == "__main__":
-    start_scheduler()
+# from scheduler.scheduler import start_scheduler
+# if __name__ == "__main__":
+#     start_scheduler()
+
+
+
+
+# from reports.report_generator import generate_report
+# generate_report()   
